@@ -84,8 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
-  const gtmId = "GTM-K96FHGX6";
-  const gtmScript = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${gtmId}');`;
+  const gtmScript = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src="https://iyrvlvtw.apd.stape.io/qiyrvlvtw.js?"+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','17=HhBLKyI%2FVCJOQjAkMSpPTwFJREJH');`;
 
   return (
     <html lang="en">
@@ -96,7 +95,7 @@ function RootShell({ children }: { children: ReactNode }) {
       <body>
         <noscript>
           <iframe
-            src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+            src="https://iyrvlvtw.apd.stape.io/ns.html?id=GTM-K96FHGX6"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
