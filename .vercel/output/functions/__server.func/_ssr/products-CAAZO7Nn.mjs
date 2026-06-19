@@ -7,7 +7,7 @@ import { n as Footer, r as Navbar } from "./Footer-uohJH0YK.mjs";
 import { t as Input } from "./input-B8Sh0V8r.mjs";
 import { n as products } from "./products-CY-qMdL3.mjs";
 import { t as ProductCard } from "./ProductCard-N5J6FZph.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/products-BSg5AgJ9.js
+//#region node_modules/.nitro/vite/services/ssr/assets/products-CAAZO7Nn.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function ProductList() {
@@ -17,6 +17,20 @@ function ProductList() {
 	const [maxPrice, setMaxPrice] = (0, import_react.useState)(100);
 	(0, import_react.useEffect)(() => {
 		track("page_view", { page: "products" });
+	}, []);
+	(0, import_react.useEffect)(() => {
+		track("view_item_list", { ecommerce: {
+			item_list_id: "products_page",
+			item_list_name: "All Products",
+			items: products.map((p, index) => ({
+				item_id: p.product_id,
+				item_name: p.product_name,
+				item_brand: p.brand,
+				item_category: p.category,
+				price: p.price,
+				index
+			}))
+		} });
 	}, []);
 	const cats = ["All", ...Array.from(new Set(products.map((p) => p.category)))];
 	const filtered = (0, import_react.useMemo)(() => {

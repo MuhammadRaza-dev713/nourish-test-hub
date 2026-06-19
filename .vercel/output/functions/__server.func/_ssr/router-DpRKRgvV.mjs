@@ -7,7 +7,7 @@ import { t as getProduct } from "./products-CY-qMdL3.mjs";
 import { t as Toaster } from "../_libs/sonner.mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
 import { t as QueryClientProvider } from "../_libs/tanstack__react-query.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-BAIesM84.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-DpRKRgvV.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var styles_default = "/assets/styles-BBg45W9t.css";
@@ -162,7 +162,7 @@ var Route$7 = createFileRoute("/quiz")({
 	}] }),
 	component: lazyRouteComponent($$splitComponentImporter$7, "component")
 });
-var $$splitComponentImporter$6 = () => import("./products-BSg5AgJ9.mjs");
+var $$splitComponentImporter$6 = () => import("./products-CAAZO7Nn.mjs");
 var Route$6 = createFileRoute("/products")({
 	head: () => ({ meta: [{ title: "Shop Premium Supplements — VitaCore" }, {
 		name: "description",

@@ -28,6 +28,23 @@ function ProductList() {
     track("page_view", { page: "products" });
   }, []);
 
+  useEffect(() => {
+    track("view_item_list", {
+      ecommerce: {
+        item_list_id: "products_page",
+        item_list_name: "All Products",
+        items: products.map((p, index) => ({
+          item_id: p.product_id,
+          item_name: p.product_name,
+          item_brand: p.brand,
+          item_category: p.category,
+          price: p.price,
+          index,
+        })),
+      },
+    });
+  }, []);
+
   const cats = ["All", ...Array.from(new Set(products.map((p) => p.category)))];
 
   const filtered = useMemo(() => {
