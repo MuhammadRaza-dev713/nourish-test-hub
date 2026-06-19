@@ -1,5 +1,16 @@
 {
   "buildCommand": "bun run build",
-  "outputDirectory": ".output/public",
-  "framework": null
+  "outputDirectory": "dist/public",
+  "framework": null,
+  "functions": {
+    "dist/server/server.js": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/dist/server/server.js"
+    }
+  ]
 }
