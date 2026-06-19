@@ -6,7 +6,7 @@ import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { a as Trash2, h as Minus, l as ShoppingBag, p as Plus } from "../_libs/lucide-react.mjs";
 import { n as Footer, r as Navbar, t as Button } from "./Footer-uohJH0YK.mjs";
 import { t as Input } from "./input-B8Sh0V8r.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/cart-JiE99OFe.js
+//#region node_modules/.nitro/vite/services/ssr/assets/cart-D2dTqah4.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function CartPage() {
@@ -175,6 +175,25 @@ function CartPage() {
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
 								to: "/checkout",
+								onClick: () => {
+									track("initiate_checkout", {
+										currency: "USD",
+										value: total,
+										coupon: applied > 0 ? coupon.trim().toUpperCase() : void 0,
+										ecommerce: {
+											currency: "USD",
+											value: total,
+											items: items.map(({ product, quantity }) => ({
+												item_id: product.product_id,
+												item_name: product.product_name,
+												item_brand: product.brand,
+												item_category: product.category,
+												price: product.price,
+												quantity
+											}))
+										}
+									});
+								},
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
 									id: "checkout_button",
 									"data-event": "initiate_checkout",

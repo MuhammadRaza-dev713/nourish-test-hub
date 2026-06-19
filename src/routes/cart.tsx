@@ -115,7 +115,28 @@ function CartPage() {
                 <span className="font-semibold">Total</span>
                 <span className="font-display text-2xl font-extrabold">${total.toFixed(2)}</span>
               </div>
-              <Link to="/checkout">
+              <Link
+                to="/checkout"
+                onClick={() => {
+                  track("initiate_checkout", {
+                    currency: "USD",
+                    value: total,
+                    coupon: applied > 0 ? coupon.trim().toUpperCase() : undefined,
+                    ecommerce: {
+                      currency: "USD",
+                      value: total,
+                      items: items.map(({ product, quantity }) => ({
+                        item_id: product.product_id,
+                        item_name: product.product_name,
+                        item_brand: product.brand,
+                        item_category: product.category,
+                        price: product.price,
+                        quantity,
+                      })),
+                    },
+                  });
+                }}
+              >
                 <Button
                   id="checkout_button"
                   data-event="initiate_checkout"

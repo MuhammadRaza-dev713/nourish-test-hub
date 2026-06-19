@@ -7,7 +7,7 @@ import { t as getProduct } from "./products-CY-qMdL3.mjs";
 import { t as Toaster } from "../_libs/sonner.mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
 import { t as QueryClientProvider } from "../_libs/tanstack__react-query.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-DpRKRgvV.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-DPySM7vz.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var styles_default = "/assets/styles-BBg45W9t.css";
@@ -185,7 +185,7 @@ var Route$3 = createFileRoute("/checkout")({
 	head: () => ({ meta: [{ title: "Checkout — VitaCore" }] }),
 	component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
-var $$splitComponentImporter$2 = () => import("./cart-JiE99OFe.mjs");
+var $$splitComponentImporter$2 = () => import("./cart-D2dTqah4.mjs");
 var Route$2 = createFileRoute("/cart")({
 	head: () => ({ meta: [{ title: "Your Cart — VitaCore" }] }),
 	component: lazyRouteComponent($$splitComponentImporter$2, "component")
